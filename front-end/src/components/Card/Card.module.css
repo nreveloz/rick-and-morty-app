@@ -1,0 +1,117 @@
+.divCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    background-color:#000814;
+    padding: 1rem;
+    border: 3px solid #7cb038;
+    border-radius: 3rem;
+    margin:1rem;
+    font-family: "Helvetica Neue","serif";
+    font-size: 15px;
+    object-position: center;
+    transition: .2s;
+}
+
+.divCard:hover {
+    background-color: #2A413B;
+    color: beige;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.divCard::-webkit-scrollbar {
+    width:3px;
+}
+
+.divCard::-webkit-scrollbar-thumb {
+    background: #7cb038;
+    border-radius: 3xp;
+}
+
+.divButtons {
+    display: flex;
+    flex-direction: row;
+    align-self:end;
+}
+
+.buttonFav {
+    align-self: flex-end;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 3em;
+    height: 3em;
+    background-color:#7cb038;
+    border-color: #70e000;
+    border-radius: 30px;
+}
+
+.buttonCard {
+    align-self: flex-end;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 3em;
+    height: 3em;
+    background-color:#7cb038;
+    border-color: #70e000;
+    border-radius: 30px;
+    font-weight: bolder;
+
+}
+
+.CardH2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    color: #01b3cf;
+}
+
+.CardH2Species {
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    color: #7cb038;
+}
+
+.CardImg {
+    justify-content:center;
+    max-width: 70%;
+    height: auto;
+    border-radius: 200px;
+    border: 8px solid #70e000;
+    padding: inherit;
+}
+
+@media (max-width: 600px) {
+    .divCard {
+        height: auto;
+        align-items: center;
+        font-size: 10px;
+        width: 18rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .CardImg {
+        height: 43%;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttonCard {
+        width: 1.9em;
+        height: 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttonFav {
+        width: 1.9em;
+        height: 2em;
+    }
+}

@@ -1,0 +1,30 @@
+
+.navDiv {
+    align-items: center;
+    justify-content: center;
+    background-color:#2A413B;
+    width: auto;
+    padding: 0.5rem;
+}
+
+.navNav {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem;
+    font-size: small;
+    font-family: "Helvetica Neue", "serif";
+}
+
+.navLink {
+    text-Decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+.navLink:hover{
+    transform: scale(1.4);
+    font-weight: bold;
+}

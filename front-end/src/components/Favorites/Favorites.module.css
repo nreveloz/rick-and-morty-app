@@ -1,0 +1,76 @@
+.headerFav {
+    display: flex;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    font-family: "Helvetica Neue","serif";
+}
+
+.selectFav {
+    margin: 0rem 0.5rem 2rem 0.5rem;
+    padding: 0.5rem;
+    border-color: #70e000;
+    font-family: "Helvetica Neue","serif";
+    font-size: 1rem;
+    background-color: #2A413B;
+    color: beige;
+}
+
+
+.divFav {
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns:repeat(auto-fill, 400px);
+    height:auto;
+    max-width:100%;
+    padding-bottom: 1rem;
+}
+
+
+.favCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    maxWidth:100%;
+    height:auto;
+    background-color:#000814;
+    padding: 1rem;
+    border: 3px solid #7cb038;
+    border-radius: 3rem;
+    margin:1rem;
+    font-family: "Helvetica Neue","serif";
+    font-size: 15px;
+    object-position: center;
+    transition: .3s;
+}
+
+
+.favH2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    color: #01b3cf;
+    align-items: center;
+}
+
+.favH2Species {
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    color: #7cb038;
+}
+
+.favImg {
+    justify-content:center;
+    max-width: 80%;
+    height: auto;
+    border-radius: 200px;
+    border: 8px solid #70e000;
+    padding: inherit;
+    margin: 1rem;
+}

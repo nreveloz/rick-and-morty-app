@@ -1,0 +1,58 @@
+.divSearchBar {
+    display: flex;
+    grid-template-columns: 50% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin-bottom: 2.5rem;
+    font-family: "Helvetica Neue","serif";
+}
+
+.inputSearchBar {
+    width: 35%;
+    height: 2.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 7rem;
+    border-radius: 10px;
+    font-family: "Helvetica Neue","serif";
+    font-size: 1.2rem;
+    text-align: center;
+    border-color: #70e000;
+}
+
+.buttonSearchBar {
+    width: 8%;
+    height: 2.8rem;
+    margin-right: 0.8rem;
+    background: #7cb038;
+    border-color: #70e000;
+    border-radius: 30px;
+    font-family: "Helvetica Neue", "serif";
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.buttonSearchBar:hover {
+    background-color: #262623c9;
+    color: beige;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .inputSearchBar {
+        width: 60%;
+        height: 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttonSearchBar {
+        width: 18%;
+        height: 2rem;
+        font-size: 0.7rem;
+    }
+}
+
