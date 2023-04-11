@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useState, useEffect} from "react";
 import {addFavorites, deleteFavorites} from "../../redux/actions";
 
-function Card({id, name, species, gender, image, onClose}) {
+function Card({id, origin, status, name, species, gender, image, onClose}) {
 
     const dispatch = useDispatch();
     const myFavorites = useSelector(state => state.myFavorites);
@@ -16,7 +16,7 @@ function Card({id, name, species, gender, image, onClose}) {
             dispatch(deleteFavorites(id));
         } else {
             setIsFavorite(true);
-            dispatch(addFavorites({id, name, species, gender, image, onClose}))
+            dispatch(addFavorites({id, origin, status, name, species, gender, image, onClose}))
         }
     }
 

@@ -1,10 +1,11 @@
-import {ADD_FAVORITES, DELETE_FAVORITES, FILTER, ORDER, SEE_ALL_FAV } from "./action-types"
+import {ADD_FAVORITES, DELETE_FAVORITES, FILTER, ORDER, SAVE_USER_SESSION, SEE_ALL_FAV} from "./action-types"
 
 
 const initialState = {
     myFavorites: [],
     allCharacters: [],
     errors: {},
+    userSession : {}
 }
 
 const reducer = (state = initialState, action) => {
@@ -42,9 +43,17 @@ const reducer = (state = initialState, action) => {
                 }
 
         case SEE_ALL_FAV:
+            console.log("state : ", state)
             return {
                 ...state,
                 myFavorites: [...state.myFavorites],
+            }
+
+        case SAVE_USER_SESSION:
+            console.log("saving user session : ", state)
+            return {
+                ...state,
+                userSession: action.payload,
             }
 
         case "ERROR":

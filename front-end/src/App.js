@@ -9,6 +9,7 @@ import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form"
 import Favorites from "./components/Favorites/Favorites";
 import SearchBar from "./components/SearchBar/SearchBar";
+import axios from "axios";
 
 
 function App() {
@@ -19,14 +20,19 @@ function App() {
     const [ characters, setCharacters ] = useState( []);
 
     const [ access, setAccess ] = useState(false);
-    const username = "naty@hotmail.com";
-    const password = "Nata1234!"
 
     const login = (userData) => {
-        if(userData.username === username && userData.password === password){
-            setAccess(true);
-            navigate("/home");
-        }
+        axios.get("http://localhost:3001/rickandmorty/login", {
+            params: {
+                email : userData.username,
+                password: userData.password
+            }}).then(response => {
+                const {access} = response.data
+                if (access) {
+                    setAccess(true);
+                    navigate("/home");
+                }
+        })
     }
 
     useEffect( () => {    /// si los datos no coinciden te quedas en "/" login

@@ -1,4 +1,4 @@
-import { ADD_FAVORITES, DELETE_FAVORITES, FILTER, ORDER, SEE_ALL_FAV  } from "./action-types";
+import {ADD_FAVORITES, DELETE_FAVORITES, FILTER, ORDER, SAVE_USER_SESSION, SEE_ALL_FAV} from "./action-types";
 import axios from "axios";
 
 export const addFavorites = (character) => {
@@ -8,6 +8,7 @@ export const addFavorites = (character) => {
                 " http://localhost:3001/rickandmorty/favs",
                 character
             );
+            console.log("response from backend ", responseFromBackend)
             return dispatch (
                 { type: ADD_FAVORITES, payload: responseFromBackend.data }
             )
@@ -65,5 +66,9 @@ export const orderCards = (id) => {
 
 export const seeAllFav = () => {
     return { type: SEE_ALL_FAV,}
+};
+
+export const saveUserSession = (userSession) => {
+    return { type: SAVE_USER_SESSION, payload: userSession}
 };
 
