@@ -13,7 +13,9 @@ async function getCharById( req, res ) {
             name: response.data.name,
             image: response.data.image,
             gender: response.data.gender,
-            species: response.data.species
+            species: response.data.species,
+            origin: response.data.origin.name,
+            status: response.data.status
         };
         return res.status(200).json(character);
     } catch(error) {

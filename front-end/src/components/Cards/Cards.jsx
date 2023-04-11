@@ -7,11 +7,13 @@ function Cards(props) {
    return(
        <div className={style.divCards}>
           {
-             characters.map(({id, name, species, gender, image}) => {
+             characters.map(({id, origin, status, name, species, gender, image}) => {
                 return <Card
                     key={id}
                     id={id}
                     name={name}
+                    origin = {origin}
+                    status = {status}
                     species={species}
                     gender={gender}
                     image={image}
